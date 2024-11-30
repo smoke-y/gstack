@@ -1,12 +1,12 @@
 namespace gstack{
     void init(){
         #if(RLS)
-        trace::file = fopen("gstack.log", "a+");
+        traceData::file = fopen("data/data/g.stack.gstack/files/gstack.log", "w");
         #endif
     }
     void uninit(){
         #if(RLS)
-        fclose(trace::file);
+        fclose(traceData::file);
         #endif
     }
 };
