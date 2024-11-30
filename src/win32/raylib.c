@@ -1,6 +1,10 @@
 #define PLATFORM_DESKTOP
 
-#include "../../vendor/raylib/src/rcore.c"
+#include "rcore.c"
+#if(DBG)
+#define RAYGUI_IMPLEMENTATION
+#include "../../vendor/raygui/src/raygui.h"
+#endif
 
 #pragma comment(lib, "Shell32.lib")
 #pragma comment(lib, "User32.lib")

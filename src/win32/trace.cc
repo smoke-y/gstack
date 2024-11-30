@@ -7,12 +7,13 @@ void glog(const char *fmt, ...){
 };
 #else
 namespace trace{
-    static void FILE* traceFile;
+    static FILE *traceFile;
 };
-void clog(const char *fmt, ...){
+void glog(const char *fmt, ...){
+    printf("LKSJDF");
     va_list args;
     va_start(args, fmt);
-    vfprintf((FILE*)trace::traceFile, fmt, args);
+    vfprintf(trace::traceFile, fmt, args);
     va_end(args);
 };
 #endif
