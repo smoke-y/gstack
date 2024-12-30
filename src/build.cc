@@ -3,7 +3,9 @@
 #include <stdlib.h>
 
 #include "raylib.h"
+#if(DBG)
 #include "../vendor/raygui/src/raygui.h"
+#endif
 
 #include "basic.hh"
 #if(WIN)
@@ -11,4 +13,5 @@
 #include "win32/init.cc"
 #endif
 
-#include "main.cc"
+#include "game.cc"
+#include GAME_ENTRY
